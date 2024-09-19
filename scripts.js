@@ -7,13 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Verify if the credentials match Group6 user
+        // Check if credentials match
         if (username === "Group6" && password === "123456") {
             alert("Login successful! Welcome, Group6.");
-            // Redirect to members-only page or show content
-            document.getElementById('members-only-content').style.display = 'block';
+            
+            // Hide login form and show members-only content
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('members-content').style.display = 'block';
         } else {
-            alert("Incorrect credentials, please try again.");
+            // Show error message
+            document.getElementById('error-message').style.display = 'block';
         }
     });
 
@@ -31,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getBotResponse(userMessage) {
-        // Define bot responses
         const responses = {
             "beginner": "Let's start with the basic 'Finger Heart' move! 🖤 Step 1: Extend your thumb and index finger. Step 2: Cross them to form a heart shape. Give it a try!",
             "intermediate": "Great! Time for 'The Wave'. 🕺 Step 1: Start by raising your arms. Step 2: Shift one shoulder up and follow with your arm. Step 3: Let the wave flow through your body!",
@@ -56,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "try a class": "You can try a class by signing up for a trial session on our website."
         };
 
-        // Basic keyword matching for responses
         const lowerCaseMessage = userMessage.toLowerCase();
         for (const key in responses) {
             if (lowerCaseMessage.includes(key)) {
@@ -64,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Default response for unknown questions
         return "For more information, please contact us.";
     }
 
