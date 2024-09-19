@@ -15,11 +15,12 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#members">Members Only</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tech.html">Tech</a></li>
+                <li><a href="tech.html">Tech</a></li> <!-- Link to tech.html -->
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section with Video Embed -->
     <section id="hero">
         <div class="hero-content">
             <h1>Master K-pop Choreography</h1>
@@ -57,45 +58,48 @@
             </div>
             <div class="card">
                 <h3>Exclusive Workshops</h3>
-                <p>Join exclusive live sessions with renowned K-pop instructors.</p>
+                <p>Join exclusive live workshops with top K-pop dancers.</p>
             </div>
         </div>
     </section>
 
     <section id="members">
         <h2>Members Only</h2>
-        <div id="login-area">
+        <div class="login-form">
             <form id="loginForm">
                 <label for="username">Username:</label>
-                <input type="text" id="username" required><br>
+                <input type="text" id="username" required>
                 <label for="password">Password:</label>
-                <input type="password" id="password" required><br>
-                <input type="submit" value="Login">
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+                <p id="error-message" style="display: none; color: red;">Invalid username or password</p>
             </form>
-            <div id="error-message" style="display:none; color: red;">Incorrect username or password. Please try again.</div>
         </div>
-
-        <div id="members-content" style="display:none;">
-            <h3>Welcome, Group6!</h3>
-            <p>You now have access to exclusive content.</p>
-            <!-- Include members-only content here -->
+        <div id="members-content" style="display: none;">
+            <h3>Welcome, Member!</h3>
+            <p>You now have access to exclusive dance videos and choreography lessons.</p>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email us at <a href="mailto:support@dancewithdreamers.com">support@dancewithdreamers.com</a> with any questions.</p>
+        <p>If you have any questions or need support, feel free to reach us at:</p>
+        <p><strong>Email:</strong> DanceWithDreamers1@gmail.com</p>
     </section>
 
+    <!-- AI Bot Section -->
     <section id="ai-bot">
-        <h2>Ask our AI Bot</h2>
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Ask me anything about dance!">
-        <button id="send-btn">Send</button>
+        <div class="ai-container">
+            <div class="ai-chat">
+                <div id="chat-box"></div>
+                <input type="text" id="user-input" placeholder="Ask me anything about our dance classes...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 DanceWithDreamers. All Rights Reserved.</p>
+        <p>&copy; 2024 DanceWithDreamers. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
