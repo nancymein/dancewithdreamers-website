@@ -2,7 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle login form submission
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        // Handle login logic here
+
+        // Get username and password from input fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Verify if the credentials match Group6 user
+        if (username === "Group6" && password === "123456") {
+            alert("Login successful! Welcome, Group6.");
+            // Redirect to members-only page or show content
+            document.getElementById('members-only-content').style.display = 'block';
+        } else {
+            alert("Incorrect credentials, please try again.");
+        }
     });
 
     // AI Bot functionality
