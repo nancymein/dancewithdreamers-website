@@ -2,24 +2,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle login form submission
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        // Get username and password from input fields
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Check if credentials match
-        if (username === "Group6" && password === "123456") {
-            alert("Login successful! Welcome, Group6.");
-            
-            // Hide login form and show members-only content
+        // Sample logic for sign in (You can replace this with real authentication)
+        if (username === 'Group6' && password === '123456') {
+            document.getElementById('error-message').style.display = 'none';
             document.getElementById('loginForm').style.display = 'none';
             document.getElementById('members-content').style.display = 'block';
         } else {
-            // Show error message
             document.getElementById('error-message').style.display = 'block';
         }
     });
 
+    // Handle Sign In and Sign Up links
+    const signInBtn = document.getElementById('signInBtn');
+    const signUpBtn = document.getElementById('signUpBtn');
+
+    signInBtn.addEventListener('click', () => {
+        const username = prompt('Enter your username:');
+        const password = prompt('Enter your password:');
+        
+        // Simple login validation (you should use a server-side method)
+        if (username && password) {
+            alert(`Signed in as ${username}`);
+            // Simulate showing members-only content
+            document.getElementById('members-content').style.display = 'block';
+        } else {
+            alert('Please provide valid credentials.');
+        }
+    });
+
+    signUpBtn.addEventListener('click', () => {
+        const newUsername = prompt('Choose a username:');
+        const newPassword = prompt('Choose a password:');
+        
+        if (newUsername && newPassword) {
+            alert(`Sign Up successful! Username: ${newUsername}`);
+            // Here you could save the user's data for actual sign-up logic
+            // For example, you might send the new user's data to a server
+        } else {
+            alert('Sign Up failed. Please try again.');
+        }
+    });
     // AI Bot functionality
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
