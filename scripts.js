@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "video-intermediate": "Watch this video to master 'The Wave' dance.<br><iframe width='560' height='315' src='https://www.youtube.com/embed/OY8oS1SBpas' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>",
             "video-advanced": "Follow along with this video to perfect your 'Body Rolls'.<br><iframe width='560' height='315' src='https://www.youtube.com/embed/OY8oS1SBpas' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>",
             "thanks": "You're welcome! Keep practicing, and you'll be a pro in no time!",
-            "package": "We offer a variety of packages. Please visit our Services page for more details.",
+            "package": "We offer a variety of packages: <br>Beginner Package: ฿1,500/month <br>Intermediate Package: ฿2,800/month <br>Advanced Package: ฿3,800/month.",
             "membership": "Our membership gives you access to exclusive content. You can sign up on the Members Only page.",
             "new user promotion": "New users can enjoy a special discount. Check our Promotions section for details.",
             "level test": "You can take a level test to find the right class for you. Please contact us for more information.",
